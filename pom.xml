@@ -6,7 +6,7 @@
 
   <groupId>koddas.web.war</groupId>
   <artifactId>wwp</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0</version>   <!-- For snapshots use 1.0.0-SNAPSHOT -->
   <packaging>war</packaging>
 
   <name>WAR Web Project</name>
@@ -66,4 +66,19 @@
       </plugin>
     </plugins>
   </build>
+
+  <!-- Nexus distribution management -->
+  <distributionManagement>
+    <repository>
+      <id>maven-project-1</id>
+      <name>Releases</name>
+      <url>http://13.201.21.42:8081/repository/maven-project-1/</url>
+    </repository>
+    <snapshotRepository>
+      <id>maven-snapshots-1</id>
+      <name>Snapshots</name>
+      <url>http://13.201.21.42:8081/repository/maven-snapshots-1/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
